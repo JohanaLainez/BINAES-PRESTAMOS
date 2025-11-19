@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build folders
+**/bin/
+**/obj/
+
+# Publish output
+**/wwwroot/lib/
+
+# Logs
+*.log
+
+# SQLite (si lo usas para pruebas)
+*.db
+*.db-shm
+*.db-wal
