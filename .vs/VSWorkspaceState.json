@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Binaes.Web",
+    "\\Binaes.Web\\Controllers",
+    "\\Binaes.Web\\Data",
+    "\\Binaes.Web\\Views",
+    "\\Binaes.Web\\Views\\Home",
+    "\\Binaes.Web\\Views\\Shared",
+    "\\Binaes.Web\\wwwroot",
+    "\\Binaes.Web\\wwwroot\\css",
+    "\\Binaes.Web\\wwwroot\\js"
+  ],
+  "PreviewInSolutionExplorer": false
+}
