@@ -1,56 +1,74 @@
-﻿@model Prestamo
+﻿@model Binaes.Web.Models.Prestamo
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear préstamo";
 }
 
-<h1>Create</h1>
+<h1 class="mb-4">Crear préstamo</h1>
 
-<h4>Prestamo</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UsuarioId" class="control-label"></label>
-                <select asp-for="UsuarioId" class ="form-control" asp-items="ViewBag.UsuarioId"></select>
+    <div class="col-md-6 col-lg-5">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+            <div class="mb-3">
+                <label asp-for="UsuarioId" class="form-label">Usuario</label>
+                <select asp-for="UsuarioId" class="form-select" asp-items="ViewBag.UsuarioId"></select>
+                <span asp-validation-for="UsuarioId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="StaffId" class="control-label"></label>
-                <select asp-for="StaffId" class ="form-control" asp-items="ViewBag.StaffId"></select>
+
+            <div class="mb-3">
+                <label asp-for="StaffId" class="form-label">Staff</label>
+                <select asp-for="StaffId" class="form-select" asp-items="ViewBag.StaffId"></select>
+                <span asp-validation-for="StaffId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FechaPrestamo" class="control-label"></label>
-                <input asp-for="FechaPrestamo" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="FechaPrestamo" class="form-label"></label>
+                <input asp-for="FechaPrestamo" type="date" class="form-control" />
                 <span asp-validation-for="FechaPrestamo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FechaVencimiento" class="control-label"></label>
-                <input asp-for="FechaVencimiento" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="FechaVencimiento" class="form-label"></label>
+                <input asp-for="FechaVencimiento" type="date" class="form-control" />
                 <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FechaDevolucion" class="control-label"></label>
-                <input asp-for="FechaDevolucion" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="FechaDevolucion" class="form-label"></label>
+                <input asp-for="FechaDevolucion" type="date" class="form-control" />
                 <span asp-validation-for="FechaDevolucion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
+
+            <!-- Si Estado es texto libre, deja input; si es listado, usa select -->
+            <div class="mb-3">
+                <label asp-for="Estado" class="form-label"></label>
                 <input asp-for="Estado" class="form-control" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            @* Ejemplo con select:
+            <div class="mb-3">
+                <label asp-for="Estado" class="form-label"></label>
+                <select asp-for="Estado" class="form-select">
+                    <option value="Activo">Activo</option>
+                    <option value="Devuelto">Devuelto</option>
+                    <option value="Vencido">Vencido</option>
+                </select>
+                <span asp-validation-for="Estado" class="text-danger"></span>
+            </div>
+            *@
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Volver a la lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

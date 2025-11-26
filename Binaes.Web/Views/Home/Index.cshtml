@@ -1,8 +1,83 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Sistema de Préstamos BINAES</h1>
+        <p class="lead">
+            Administrá libros, ejemplares, usuarios, staff y préstamos desde un solo lugar.
+        </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- Libros -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">📘 Libros</h4>
+                    <p class="card-text">Gestiona todos los libros registrados en la biblioteca.</p>
+                    <a asp-controller="Libros" asp-action="Index" class="btn btn-primary">Ir a Libros</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ejemplares -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">📖 Ejemplares</h4>
+                    <p class="card-text">Controla los ejemplares disponibles y su estado.</p>
+                    <a asp-controller="Ejemplares" asp-action="Index" class="btn btn-primary">Ir a Ejemplares</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usuarios -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">👤 Usuarios</h4>
+                    <p class="card-text">Administra los usuarios registrados en el sistema.</p>
+                    <a asp-controller="Usuarios" asp-action="Index" class="btn btn-primary">Ir a Usuarios</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Staff -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">🧑‍💼 Staff</h4>
+                    <p class="card-text">Gestiona el personal encargado de la biblioteca.</p>
+                    <a asp-controller="Staffs" asp-action="Index" class="btn btn-primary">Ir a Staff</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Préstamos -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">📅 Préstamos</h4>
+                    <p class="card-text">Administra los préstamos activos y su historial.</p>
+                    <a asp-controller="Prestamos" asp-action="Index" class="btn btn-primary">Ir a Préstamos</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parámetros -->
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h4 class="card-title">⚙️ Parámetros</h4>
+                    <p class="card-text">Configura reglas del sistema como plazos y renovaciones.</p>
+                    <a asp-controller="Parametros" asp-action="Index" class="btn btn-primary">Ir a Parámetros</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

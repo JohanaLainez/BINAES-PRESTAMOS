@@ -1,30 +1,47 @@
-﻿@model LibroAutor
+﻿@model Binaes.Web.Models.LibroAutor
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar relación Libro-Autor";
 }
 
-<h1>Edit</h1>
+<h1 class="mb-4">Editar relación Libro - Autor</h1>
 
-<h4>LibroAutor</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="LibroId" />
-            <input type="hidden" asp-for="AutorId" />
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+    <div class="col-md-6 col-lg-5">
+        
+        <form asp-action="Edit"
+              method="post"
+              asp-route-libroId="@Model.LibroId"
+              asp-route-autorId="@Model.AutorId">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+            <!-- Seleccionar (o cambiar) Libro -->
+            <div class="mb-3">
+                <label asp-for="LibroId" class="form-label">Libro</label>
+                <select asp-for="LibroId" class="form-select" asp-items="ViewBag.LibroId"></select>
+                <span asp-validation-for="LibroId" class="text-danger"></span>
+                <div class="form-text">Actual: @Model.Libro?.Titulo ?? $"ID: {Model.LibroId}"</div>
+            </div>
+
+            <!-- Seleccionar (o cambiar) Autor -->
+            <div class="mb-3">
+                <label asp-for="AutorId" class="form-label">Autor</label>
+                <select asp-for="AutorId" class="form-select" asp-items="ViewBag.AutorId"></select>
+                <span asp-validation-for="AutorId" class="text-danger"></span>
+                <div class="form-text">Actual: @Model.Autor?.Nombre ?? $"ID: {Model.AutorId}"</div>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Volver a la lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

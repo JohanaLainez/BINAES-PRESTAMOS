@@ -1,44 +1,50 @@
-﻿@model Parametros
+﻿@model Binaes.Web.Models.Parametro
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar parámetro";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>Parametros</h4>
+<h4>Parámetro</h4>
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
+
+            <div class="form-group mb-2">
                 <label asp-for="PlazoDias" class="control-label"></label>
                 <input asp-for="PlazoDias" class="form-control" />
                 <span asp-validation-for="PlazoDias" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group mb-2">
                 <label asp-for="TopePrestamosActivos" class="control-label"></label>
                 <input asp-for="TopePrestamosActivos" class="form-control" />
                 <span asp-validation-for="TopePrestamosActivos" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group mb-3">
                 <label asp-for="MaxRenovaciones" class="control-label"></label>
                 <input asp-for="MaxRenovaciones" class="form-control" />
                 <span asp-validation-for="MaxRenovaciones" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

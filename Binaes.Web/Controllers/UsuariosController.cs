@@ -1,135 +1,112 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Binaes.Web.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Json;
+using Binaes.Web.Models;
 
 namespace Binaes.Web.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HttpClient _http;
+        private const string Recurso = "api/Usuarios";
 
-        public UsuariosController(ApplicationDbContext context)
+        public UsuariosController(IHttpClientFactory httpFactory)
         {
-            _context = context;
+            _http = httpFactory.CreateClient("BinaesApi");
         }
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuarios.ToListAsync());
+            var usuarios = await _http.GetFromJsonAsync<List<Usuario>>(Recurso);
+            return View(usuarios);
         }
 
         // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
+            var usuario = await _http.GetFromJsonAsync<Usuario>($"{Recurso}/{id}");
+            if (usuario == null) return NotFound();
             return View(usuario);
         }
 
         // GET: Usuarios/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+        public IActionResult Create() => View();
 
         // POST: Usuarios/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Carnet,Nombre,Email,Telefono,Activo")] Usuario usuario)
+        public async Task<IActionResult> Create(Usuario usuario)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) return View(usuario);
+
+          
+            var payload = new
             {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                carnet = usuario.Carnet,
+                nombre = usuario.Nombre,
+                email = usuario.Email,
+                telefono = usuario.Telefono,
+                activo = usuario.Activo
+            };
+
+            var res = await _http.PostAsJsonAsync(Recurso, payload);
+
+            if (!res.IsSuccessStatusCode)
+            {
+                var body = await res.Content.ReadAsStringAsync(); // ver motivo real
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                return View(usuario);
             }
-            return View(usuario);
+
+            TempData["Ok"] = "Usuario creado correctamente.";
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
+            var usuario = await _http.GetFromJsonAsync<Usuario>($"{Recurso}/{id}");
+            if (usuario == null) return NotFound();
             return View(usuario);
         }
 
         // POST: Usuarios/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Carnet,Nombre,Email,Telefono,Activo")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, Usuario usuario)
         {
-            if (id != usuario.Id)
+            if (id != usuario.Id) return BadRequest();
+            if (!ModelState.IsValid) return View(usuario);
+
+           
+            var payload = new
             {
-                return NotFound();
+                id = usuario.Id,
+                carnet = usuario.Carnet,
+                nombre = usuario.Nombre,
+                email = usuario.Email,
+                telefono = usuario.Telefono,
+                activo = usuario.Activo
+            };
+
+            var res = await _http.PutAsJsonAsync($"{Recurso}/{id}", payload);
+
+            if (!res.IsSuccessStatusCode)
+            {
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                return View(usuario);
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(usuario);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UsuarioExists(usuario.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(usuario);
+            TempData["Ok"] = "Usuario actualizado.";
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
+            var usuario = await _http.GetFromJsonAsync<Usuario>($"{Recurso}/{id}");
+            if (usuario == null) return NotFound();
             return View(usuario);
         }
 
@@ -138,19 +115,10 @@ namespace Binaes.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario != null)
-            {
-                _context.Usuarios.Remove(usuario);
-            }
-
-            await _context.SaveChangesAsync();
+            var res = await _http.DeleteAsync($"{Recurso}/{id}");
+            TempData[res.IsSuccessStatusCode ? "Ok" : "Error"] =
+                res.IsSuccessStatusCode ? "Usuario eliminado." : $"Error {(int)res.StatusCode}";
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool UsuarioExists(int id)
-        {
-            return _context.Usuarios.Any(e => e.Id == id);
         }
     }
 }

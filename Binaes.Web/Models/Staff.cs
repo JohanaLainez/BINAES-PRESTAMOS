@@ -1,10 +1,22 @@
-﻿using System;
+﻿using System.Text.Json.Serialization;
 
-public class Staff
+namespace Binaes.Web.Models
 {
-    public int Id { get; set; }
-    public string Username { get; set; } = "";
-    public string Nombre { get; set; } = "";
-    public string Rol { get; set; } = "BIBLIOTECARIO";
-    public bool Activo { get; set; } = true;
+    public class Staff
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("username")]
+        public string? Username { get; set; }
+
+        [JsonPropertyName("nombre")]
+        public string? Nombre { get; set; }
+
+        [JsonPropertyName("rol")]
+        public string? Rol { get; set; }
+
+        [JsonPropertyName("activo")]
+        public bool Activo { get; set; } = true;
+    }
 }

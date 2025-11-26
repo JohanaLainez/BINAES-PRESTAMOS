@@ -1,156 +1,103 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Binaes.Web.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Json;
+using Binaes.Web.Models;
 
 namespace Binaes.Web.Controllers
 {
     public class ParametrosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HttpClient _http;
+        private const string Recurso = "api/Parametros";
 
-        public ParametrosController(ApplicationDbContext context)
+        public ParametrosController(IHttpClientFactory httpFactory)
         {
-            _context = context;
+            _http = httpFactory.CreateClient("BinaesApi");
         }
 
-        // GET: Parametros
+        // GET: /Parametros
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Parametros.ToListAsync());
-        }
-
-        // GET: Parametros/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var parametros = await _context.Parametros
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (parametros == null)
-            {
-                return NotFound();
-            }
-
+            var parametros = await _http.GetFromJsonAsync<List<Parametro>>(Recurso);
             return View(parametros);
         }
 
-        // GET: Parametros/Create
-        public IActionResult Create()
+        // GET: /Parametros/Details/5
+        public async Task<IActionResult> Details(int id)
         {
-            return View();
+            var parametro = await _http.GetFromJsonAsync<Parametro>($"{Recurso}/{id}");
+            if (parametro == null) return NotFound();
+            return View(parametro);
         }
 
-        // POST: Parametros/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // GET: /Parametros/Create
+        public IActionResult Create() => View();
+
+        // POST: /Parametros/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PlazoDias,TopePrestamosActivos,MaxRenovaciones")] Parametros parametros)
+        public async Task<IActionResult> Create(Parametro parametro)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) return View(parametro);
+
+            var res = await _http.PostAsJsonAsync(Recurso, parametro);
+
+            if (!res.IsSuccessStatusCode)
             {
-                _context.Add(parametros);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                return View(parametro);
             }
-            return View(parametros);
+
+            TempData["Ok"] = "Parámetro creado correctamente.";
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Parametros/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: /Parametros/Edit/5
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var parametros = await _context.Parametros.FindAsync(id);
-            if (parametros == null)
-            {
-                return NotFound();
-            }
-            return View(parametros);
+            var parametro = await _http.GetFromJsonAsync<Parametro>($"{Recurso}/{id}");
+            if (parametro == null) return NotFound();
+            return View(parametro);
         }
 
-        // POST: Parametros/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: /Parametros/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PlazoDias,TopePrestamosActivos,MaxRenovaciones")] Parametros parametros)
+        public async Task<IActionResult> Edit(int id, Parametro parametro)
         {
-            if (id != parametros.Id)
+            if (id != parametro.Id) return BadRequest();
+            if (!ModelState.IsValid) return View(parametro);
+
+            var res = await _http.PutAsJsonAsync($"{Recurso}/{id}", parametro);
+
+            if (!res.IsSuccessStatusCode)
             {
-                return NotFound();
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                return View(parametro);
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(parametros);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ParametrosExists(parametros.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(parametros);
+            TempData["Ok"] = "Parámetro actualizado.";
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Parametros/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: /Parametros/Delete/5
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var parametros = await _context.Parametros
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (parametros == null)
-            {
-                return NotFound();
-            }
-
-            return View(parametros);
+            var parametro = await _http.GetFromJsonAsync<Parametro>($"{Recurso}/{id}");
+            if (parametro == null) return NotFound();
+            return View(parametro);
         }
 
-        // POST: Parametros/Delete/5
+        // POST: /Parametros/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var parametros = await _context.Parametros.FindAsync(id);
-            if (parametros != null)
-            {
-                _context.Parametros.Remove(parametros);
-            }
-
-            await _context.SaveChangesAsync();
+            var res = await _http.DeleteAsync($"{Recurso}/{id}");
+            TempData[res.IsSuccessStatusCode ? "Ok" : "Error"] =
+                res.IsSuccessStatusCode ? "Parámetro eliminado." : $"Error {(int)res.StatusCode}";
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool ParametrosExists(int id)
-        {
-            return _context.Parametros.Any(e => e.Id == id);
         }
     }
 }

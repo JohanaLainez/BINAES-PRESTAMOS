@@ -10,21 +10,23 @@
     <h4>LibroAutor</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Libro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Libro.Id)
+
+        <!-- LIBRO -->
+        <dt class="col-sm-2">Libro</dt>
+        <dd class="col-sm-10">
+            @Model.Libro?.Titulo ?? ("ID: " + Model.LibroId)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Autor.Id)
+
+        <!-- AUTOR -->
+        <dt class="col-sm-2">Autor</dt>
+        <dd class="col-sm-10">
+            @Model.Autor?.Nombre ?? ("ID: " + Model.AutorId)
         </dd>
+
     </dl>
 </div>
+
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Edit" asp-route-libroId="@Model.LibroId" asp-route-autorId="@Model.AutorId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

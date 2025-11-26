@@ -1,169 +1,103 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Binaes.Web.Data;
+using System.Net.Http;
+using System.Net.Http.Json;
+using Binaes.Web.Models;
 
 namespace Binaes.Web.Controllers
 {
     public class LibroAutorController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HttpClient _http;
+        private const string Recurso = "api/LibroAutores"; 
 
-        public LibroAutorController(ApplicationDbContext context)
+        public LibroAutorController(IHttpClientFactory httpFactory)
         {
-            _context = context;
+            _http = httpFactory.CreateClient("BinaesApi");
         }
 
         // GET: LibroAutor
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.LibroAutores.Include(l => l.Autor).Include(l => l.Libro);
-            return View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: LibroAutor/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libroAutor = await _context.LibroAutores
-                .Include(l => l.Autor)
-                .Include(l => l.Libro)
-                .FirstOrDefaultAsync(m => m.LibroId == id);
-            if (libroAutor == null)
-            {
-                return NotFound();
-            }
-
-            return View(libroAutor);
+            var lista = await _http.GetFromJsonAsync<List<LibroAutor>>(Recurso) ?? new();
+            return View(lista);
         }
 
         // GET: LibroAutor/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["AutorId"] = new SelectList(_context.Autores, "Id", "Id");
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id");
+            await RellenarCombos();
             return View();
         }
 
         // POST: LibroAutor/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LibroId,AutorId")] LibroAutor libroAutor)
+        public async Task<IActionResult> Create(LibroAutor model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(libroAutor);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AutorId"] = new SelectList(_context.Autores, "Id", "Id", libroAutor.AutorId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id", libroAutor.LibroId);
-            return View(libroAutor);
-        }
-
-        // GET: LibroAutor/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
+                await RellenarCombos(model.AutorId, model.LibroId);
+                return View(model);
             }
 
-            var libroAutor = await _context.LibroAutores.FindAsync(id);
-            if (libroAutor == null)
+          
+            var payload = new
             {
-                return NotFound();
-            }
-            ViewData["AutorId"] = new SelectList(_context.Autores, "Id", "Id", libroAutor.AutorId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id", libroAutor.LibroId);
-            return View(libroAutor);
-        }
+                autorId = model.AutorId,
+                libroId = model.LibroId
+            };
 
-        // POST: LibroAutor/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LibroId,AutorId")] LibroAutor libroAutor)
-        {
-            if (id != libroAutor.LibroId)
+            var res = await _http.PostAsJsonAsync(Recurso, payload);
+            if (!res.IsSuccessStatusCode)
             {
-                return NotFound();
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                await RellenarCombos(model.AutorId, model.LibroId);
+                return View(model);
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(libroAutor);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!LibroAutorExists(libroAutor.LibroId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AutorId"] = new SelectList(_context.Autores, "Id", "Id", libroAutor.AutorId);
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id", libroAutor.LibroId);
-            return View(libroAutor);
-        }
-
-        // GET: LibroAutor/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libroAutor = await _context.LibroAutores
-                .Include(l => l.Autor)
-                .Include(l => l.Libro)
-                .FirstOrDefaultAsync(m => m.LibroId == id);
-            if (libroAutor == null)
-            {
-                return NotFound();
-            }
-
-            return View(libroAutor);
-        }
-
-        // POST: LibroAutor/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var libroAutor = await _context.LibroAutores.FindAsync(id);
-            if (libroAutor != null)
-            {
-                _context.LibroAutores.Remove(libroAutor);
-            }
-
-            await _context.SaveChangesAsync();
+            TempData["Ok"] = "Relación Libro–Autor creada.";
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LibroAutorExists(int id)
+        // GET: LibroAutor/Delete?libroId=1&autorId=2
+        public IActionResult Delete(int libroId, int autorId)
         {
-            return _context.LibroAutores.Any(e => e.LibroId == id);
+           
+            return View(new LibroAutor { LibroId = libroId, AutorId = autorId });
+        }
+
+        // POST: LibroAutor/Delete
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int libroId, int autorId)
+        {
+            // Variante común: DELETE con querystring
+            var res = await _http.DeleteAsync($"{Recurso}?libroId={libroId}&autorId={autorId}");
+
+            // Fallback: algunas APIs aceptan DELETE con body
+            if (!res.IsSuccessStatusCode)
+            {
+                var req = new HttpRequestMessage(HttpMethod.Delete, Recurso)
+                {
+                    Content = JsonContent.Create(new { libroId, autorId })
+                };
+                res = await _http.SendAsync(req);
+            }
+
+            TempData[res.IsSuccessStatusCode ? "Ok" : "Error"] =
+                res.IsSuccessStatusCode ? "Relación eliminada." : $"Error {(int)res.StatusCode}";
+            return RedirectToAction(nameof(Index));
+        }
+
+        private async Task RellenarCombos(int? autorId = null, int? libroId = null)
+        {
+            var autores = await _http.GetFromJsonAsync<List<Autor>>("api/Autores") ?? new();
+            var libros = await _http.GetFromJsonAsync<List<Libro>>("api/Libros") ?? new();
+
+            ViewData["AutorId"] = new SelectList(autores, nameof(Autor.Id), nameof(Autor.Nombre), autorId);
+            ViewData["LibroId"] = new SelectList(libros, nameof(Libro.Id), nameof(Libro.Titulo), libroId);
         }
     }
 }

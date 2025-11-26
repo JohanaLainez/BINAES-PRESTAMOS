@@ -1,54 +1,48 @@
-﻿@model Prestamo
+﻿@model Binaes.Web.Models.Prestamo
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del préstamo";
 }
 
-<h1>Details</h1>
+<h1 class="mb-3">Detalles del préstamo</h1>
 
-<div>
-    <h4>Prestamo</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Usuario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Usuario.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Staff)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Staff.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaPrestamo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaPrestamo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaVencimiento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaVencimiento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaDevolucion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaDevolucion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3 fw-bold">Usuario</dt>
+            <dd class="col-sm-9">
+                @Model.Usuario?.Nombre ?? $"ID: {Model.UsuarioId}"
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Staff</dt>
+            <dd class="col-sm-9">
+                @Model.Staff?.Nombre ?? $"ID: {Model.StaffId}"
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Fecha de préstamo</dt>
+            <dd class="col-sm-9">
+                @Model.FechaPrestamo.ToString("yyyy-MM-dd")
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Fecha de vencimiento</dt>
+            <dd class="col-sm-9">
+                @Model.FechaVencimiento.ToString("yyyy-MM-dd")
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Fecha de devolución</dt>
+            <dd class="col-sm-9">
+                @(Model.FechaDevolucion?.ToString("yyyy-MM-dd") ?? "Aún no devuelto")
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Estado</dt>
+            <dd class="col-sm-9">
+                @Model.Estado
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="d-flex gap-2">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
 </div>

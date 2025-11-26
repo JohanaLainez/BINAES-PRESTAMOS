@@ -1,12 +1,25 @@
-﻿using System;
+﻿using System.Text.Json.Serialization;
 
-public class Ejemplar
+namespace Binaes.Web.Models
 {
+    public class Ejemplar
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
 
-    public int Id { get; set; }
-    public int LibroId { get; set; }
-    public Libro Libro { get; set; }
+        [JsonPropertyName("libroId")]
+        public int LibroId { get; set; }
 
-    public string CodigoInterno { get; set; } = "";
-    public string Estado { get; set; } = "DISPONIBLE";
+        [JsonPropertyName("libro")]
+        public Libro? Libro { get; set; }
+
+        [JsonPropertyName("codigoInterno")]
+        public string? CodigoInterno { get; set; }
+
+        [JsonPropertyName("estado")]
+        public string? Estado { get; set; }
+
+        [JsonPropertyName("prestamoItems")]
+        public List<PrestamoItem>? PrestamoItems { get; set; }
+    }
 }

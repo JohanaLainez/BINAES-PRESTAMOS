@@ -1,169 +1,155 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Binaes.Web.Data;
+using System.Net.Http.Json;
+using Binaes.Web.Models;
 
 namespace Binaes.Web.Controllers
 {
     public class PrestamosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HttpClient _http;
+        private const string Recurso = "api/Prestamos";
 
-        public PrestamosController(ApplicationDbContext context)
+        public PrestamosController(IHttpClientFactory httpFactory)
         {
-            _context = context;
+            _http = httpFactory.CreateClient("BinaesApi"); 
         }
 
-        // GET: Prestamos
+        
+        private async Task CargarCombosAsync(int? usuarioId = null, int? staffId = null)
+        {
+            // ⚠️ Staff en SINGULAR
+            var usuarios = await _http.GetFromJsonAsync<List<Usuario>>("api/Usuarios") ?? new();
+            var staffs = await _http.GetFromJsonAsync<List<Staff>>("api/Staff") ?? new();
+
+            ViewData["UsuarioId"] = new SelectList(usuarios, nameof(Usuario.Id), nameof(Usuario.Nombre), usuarioId);
+            ViewData["StaffId"] = new SelectList(staffs, nameof(Staff.Id), nameof(Staff.Nombre), staffId);
+        }
+
+        
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Prestamos.Include(p => p.Staff).Include(p => p.Usuario);
-            return View(await applicationDbContext.ToListAsync());
+            var prestamos = await _http.GetFromJsonAsync<List<Prestamo>>(Recurso);
+            return View(prestamos);
         }
 
-        // GET: Prestamos/Details/5
-        public async Task<IActionResult> Details(long? id)
+     
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var prestamo = await _context.Prestamos
-                .Include(p => p.Staff)
-                .Include(p => p.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (prestamo == null)
-            {
-                return NotFound();
-            }
-
+            var prestamo = await _http.GetFromJsonAsync<Prestamo>($"{Recurso}/{id}");
+            if (prestamo is null) return NotFound();
             return View(prestamo);
         }
 
-        // GET: Prestamos/Create
-        public IActionResult Create()
+        
+        public async Task<IActionResult> Create()
         {
-            ViewData["StaffId"] = new SelectList(_context.Staff, "Id", "Id");
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id");
-            return View();
+            await CargarCombosAsync();
+            return View(new Prestamo
+            {
+                FechaPrestamo = DateTime.Today,
+                FechaVencimiento = DateTime.Today.AddDays(7)
+            });
         }
 
-        // POST: Prestamos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UsuarioId,StaffId,FechaPrestamo,FechaVencimiento,FechaDevolucion,Estado")] Prestamo prestamo)
+        public async Task<IActionResult> Create(Prestamo prestamo)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(prestamo);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["StaffId"] = new SelectList(_context.Staff, "Id", "Id", prestamo.StaffId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id", prestamo.UsuarioId);
-            return View(prestamo);
-        }
-
-        // GET: Prestamos/Edit/5
-        public async Task<IActionResult> Edit(long? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
+                await CargarCombosAsync(prestamo.UsuarioId, prestamo.StaffId);
+                return View(prestamo);
             }
 
-            var prestamo = await _context.Prestamos.FindAsync(id);
-            if (prestamo == null)
+            
+            var payload = new
             {
-                return NotFound();
-            }
-            ViewData["StaffId"] = new SelectList(_context.Staff, "Id", "Id", prestamo.StaffId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id", prestamo.UsuarioId);
-            return View(prestamo);
-        }
+                usuarioId = prestamo.UsuarioId,
+                staffId = prestamo.StaffId,
+                fechaPrestamo = prestamo.FechaPrestamo,
+                fechaVencimiento = prestamo.FechaVencimiento,
+                fechaDevolucion = prestamo.FechaDevolucion,
+                estado = prestamo.Estado
+            };
 
-        // POST: Prestamos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Id,UsuarioId,StaffId,FechaPrestamo,FechaVencimiento,FechaDevolucion,Estado")] Prestamo prestamo)
-        {
-            if (id != prestamo.Id)
+            var res = await _http.PostAsJsonAsync(Recurso, payload);
+            if (!res.IsSuccessStatusCode)
             {
-                return NotFound();
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                await CargarCombosAsync(prestamo.UsuarioId, prestamo.StaffId);
+                return View(prestamo);
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(prestamo);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PrestamoExists(prestamo.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["StaffId"] = new SelectList(_context.Staff, "Id", "Id", prestamo.StaffId);
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Id", prestamo.UsuarioId);
-            return View(prestamo);
-        }
-
-        // GET: Prestamos/Delete/5
-        public async Task<IActionResult> Delete(long? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var prestamo = await _context.Prestamos
-                .Include(p => p.Staff)
-                .Include(p => p.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (prestamo == null)
-            {
-                return NotFound();
-            }
-
-            return View(prestamo);
-        }
-
-        // POST: Prestamos/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(long id)
-        {
-            var prestamo = await _context.Prestamos.FindAsync(id);
-            if (prestamo != null)
-            {
-                _context.Prestamos.Remove(prestamo);
-            }
-
-            await _context.SaveChangesAsync();
+            TempData["Ok"] = "Préstamo creado correctamente.";
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PrestamoExists(long id)
+       
+        public async Task<IActionResult> Edit(int id)
         {
-            return _context.Prestamos.Any(e => e.Id == id);
+            var prestamo = await _http.GetFromJsonAsync<Prestamo>($"{Recurso}/{id}");
+            if (prestamo is null) return NotFound();
+
+            await CargarCombosAsync(prestamo.UsuarioId, prestamo.StaffId);
+            return View(prestamo);
+        }
+
+       
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Prestamo prestamo)
+        {
+            if (id != prestamo.Id) return BadRequest();
+            if (!ModelState.IsValid)
+            {
+                await CargarCombosAsync(prestamo.UsuarioId, prestamo.StaffId);
+                return View(prestamo);
+            }
+
+            var payload = new
+            {
+                id = prestamo.Id,
+                usuarioId = prestamo.UsuarioId,
+                staffId = prestamo.StaffId,
+                fechaPrestamo = prestamo.FechaPrestamo,
+                fechaVencimiento = prestamo.FechaVencimiento,
+                fechaDevolucion = prestamo.FechaDevolucion,
+                estado = prestamo.Estado
+            };
+
+            var res = await _http.PutAsJsonAsync($"{Recurso}/{id}", payload);
+            if (!res.IsSuccessStatusCode)
+            {
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                await CargarCombosAsync(prestamo.UsuarioId, prestamo.StaffId);
+                return View(prestamo);
+            }
+
+            TempData["Ok"] = "Préstamo actualizado.";
+            return RedirectToAction(nameof(Index));
+        }
+
+       
+        public async Task<IActionResult> Delete(int id)
+        {
+            var prestamo = await _http.GetFromJsonAsync<Prestamo>($"{Recurso}/{id}");
+            if (prestamo is null) return NotFound();
+            return View(prestamo);
+        }
+
+    
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var res = await _http.DeleteAsync($"{Recurso}/{id}");
+            TempData[res.IsSuccessStatusCode ? "Ok" : "Error"] =
+                res.IsSuccessStatusCode ? "Préstamo eliminado." : $"Error {(int)res.StatusCode}";
+            return RedirectToAction(nameof(Index));
         }
     }
 }

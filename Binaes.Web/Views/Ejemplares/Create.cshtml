@@ -1,42 +1,48 @@
-﻿@model Ejemplar
+﻿@model Binaes.Web.Models.Ejemplar
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear ejemplar";
 }
 
-<h1>Create</h1>
+<h1 class="mb-4">Crear ejemplar</h1>
 
-<h4>Ejemplar</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="LibroId" class="control-label"></label>
-                <select asp-for="LibroId" class ="form-control" asp-items="ViewBag.LibroId"></select>
+    <div class="col-md-6 col-lg-5">
+
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <!-- LibroId (select) -->
+            <div class="mb-3">
+                <label asp-for="LibroId" class="form-label"></label>
+                <select asp-for="LibroId" asp-items="ViewBag.LibroId" class="form-select"></select>
+                <span asp-validation-for="LibroId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CodigoInterno" class="control-label"></label>
+
+            <!-- Código interno -->
+            <div class="mb-3">
+                <label asp-for="CodigoInterno" class="form-label"></label>
                 <input asp-for="CodigoInterno" class="form-control" />
                 <span asp-validation-for="CodigoInterno" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
+
+            <!-- Estado -->
+            <div class="mb-3">
+                <label asp-for="Estado" class="form-label"></label>
                 <input asp-for="Estado" class="form-control" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Volver a la lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

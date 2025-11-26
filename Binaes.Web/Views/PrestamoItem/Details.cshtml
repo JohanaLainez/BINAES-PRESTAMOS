@@ -1,48 +1,50 @@
-﻿@model PrestamoItem
+﻿@model Binaes.Web.Models.PrestamoItem
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalle del ítem de préstamo";
 }
 
-<h1>Details</h1>
+<h1>Detalles del Ítem de Préstamo</h1>
+
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <dl class="row mb-0">
+
+            <dt class="col-sm-3 fw-bold">Préstamo</dt>
+            <dd class="col-sm-9">
+                @Model.Prestamo?.Id ?? @Model.PrestamoId
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Ejemplar</dt>
+            <dd class="col-sm-9">
+                @Model.Ejemplar?.CodigoInterno ?? $"ID: {Model.EjemplarId}"
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Libro</dt>
+            <dd class="col-sm-9">
+                @Model.Ejemplar?.Libro?.Titulo
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Renovaciones</dt>
+            <dd class="col-sm-9">
+                @Model.Renovaciones
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Fecha de devolución</dt>
+            <dd class="col-sm-9">
+                @Model.FechaDevolucion?.ToString("yyyy-MM-dd")
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Estado</dt>
+            <dd class="col-sm-9">
+                @Model.Estado
+            </dd>
+
+        </dl>
+    </div>
+</div>
 
 <div>
-    <h4>PrestamoItem</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Prestamo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Prestamo.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ejemplar)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ejemplar.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Renovaciones)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Renovaciones)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaDevolucion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaDevolucion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
 </div>

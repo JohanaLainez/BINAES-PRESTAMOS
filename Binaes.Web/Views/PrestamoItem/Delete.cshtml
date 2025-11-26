@@ -1,51 +1,54 @@
-﻿@model PrestamoItem
+﻿@model Binaes.Web.Models.PrestamoItem
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar ítem de préstamo";
 }
 
-<h1>Delete</h1>
+<h1 class="mb-3 text-danger">Eliminar ítem de préstamo</h1>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>PrestamoItem</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Prestamo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Prestamo.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ejemplar)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ejemplar.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Renovaciones)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Renovaciones)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaDevolucion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaDevolucion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+<div class="alert alert-warning">
+    <strong>¿Estás segura/o de eliminar este registro?</strong><br />
+    Esta acción no se puede deshacer.
 </div>
+
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3 fw-bold">Préstamo</dt>
+            <dd class="col-sm-9">
+                @Model.Prestamo?.Id ?? @Model.PrestamoId
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Ejemplar</dt>
+            <dd class="col-sm-9">
+                @Model.Ejemplar?.CodigoInterno ?? $"ID: {Model.EjemplarId}"
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Libro</dt>
+            <dd class="col-sm-9">
+                @Model.Ejemplar?.Libro?.Titulo
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Renovaciones</dt>
+            <dd class="col-sm-9">
+                @Model.Renovaciones
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Fecha de devolución</dt>
+            <dd class="col-sm-9">
+                @Model.FechaDevolucion?.ToString("yyyy-MM-dd")
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Estado</dt>
+            <dd class="col-sm-9">
+                @Model.Estado
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="d-flex gap-2">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">🗑️ Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+</form>

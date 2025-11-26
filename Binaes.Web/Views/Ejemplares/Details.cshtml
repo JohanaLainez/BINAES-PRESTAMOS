@@ -1,36 +1,41 @@
-﻿@model Ejemplar
+﻿@model Binaes.Web.Models.Ejemplar
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del ejemplar";
 }
 
-<h1>Details</h1>
+<h1 class="mb-4">Detalles del ejemplar</h1>
 
-<div>
-    <h4>Ejemplar</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Libro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Libro.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CodigoInterno)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CodigoInterno)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h4 class="card-title">Información general</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-3 fw-bold">Libro</dt>
+            <dd class="col-sm-9">
+                @Model.Libro?.Titulo
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Código interno</dt>
+            <dd class="col-sm-9">
+                @Model.CodigoInterno
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">Estado</dt>
+            <dd class="col-sm-9">
+                @Model.Estado
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="d-flex gap-2">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+        ✏️ Editar
+    </a>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Volver a la lista
+    </a>
 </div>

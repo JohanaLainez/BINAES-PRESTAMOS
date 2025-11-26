@@ -1,9 +1,16 @@
-﻿using System;
+﻿using System.Text.Json.Serialization;
 
-public class Categoria
+namespace Binaes.Web.Models
 {
+    public class Categoria
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
 
-    public int Id { get; set; }
-    public string Nombre { get; set; } = "";
+        [JsonPropertyName("nombre")]
+        public string? Nombre { get; set; }
 
+        [JsonPropertyName("libros")]
+        public List<Libro>? Libros { get; set; }
+    }
 }

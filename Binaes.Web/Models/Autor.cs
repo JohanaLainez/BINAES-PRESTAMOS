@@ -1,7 +1,16 @@
-﻿using System;
+﻿using System.Text.Json.Serialization;
 
-public class Autor
+namespace Binaes.Web.Models
 {
-    public int Id { get; set; }
-    public string Nombre { get; set; } = "";
+    public class Autor
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("nombre")]
+        public string? Nombre { get; set; }
+
+        [JsonPropertyName("libros")]
+        public List<Libro>? Libros { get; set; }
+    }
 }

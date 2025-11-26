@@ -1,163 +1,133 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Binaes.Web.Data;
+using System.Net.Http.Json;
+using Binaes.Web.Models;
 
 namespace Binaes.Web.Controllers
 {
     public class LibrosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HttpClient _http;
+        private const string RecursoLibros = "api/Libros";
+        private const string RecursoCategorias = "api/Categorias";
 
-        public LibrosController(ApplicationDbContext context)
+        public LibrosController(IHttpClientFactory httpFactory)
         {
-            _context = context;
+            _http = httpFactory.CreateClient("BinaesApi");
         }
 
-        // GET: Libros
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Libros.Include(l => l.Categoria);
-            return View(await applicationDbContext.ToListAsync());
+            var libros = await _http.GetFromJsonAsync<List<Libro>>(RecursoLibros);
+            return View(libros);
         }
 
-        // GET: Libros/Details/5
-        public async Task<IActionResult> Details(int? id)
+        
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libro = await _context.Libros
-                .Include(l => l.Categoria)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (libro == null)
-            {
-                return NotFound();
-            }
-
+            var libro = await _http.GetFromJsonAsync<Libro>($"{RecursoLibros}/{id}");
+            if (libro == null) return NotFound();
             return View(libro);
         }
 
-        // GET: Libros/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Id");
+            await CargarCategorias();
             return View();
         }
 
-        // POST: Libros/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ISBN,Titulo,AnioPublicacion,CategoriaId")] Libro libro)
+        public async Task<IActionResult> Create(Libro libro)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(libro);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                await CargarCategorias();
+                return View(libro);
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Id", libro.CategoriaId);
+
+            var res = await _http.PostAsJsonAsync(RecursoLibros, libro);
+
+            if (!res.IsSuccessStatusCode)
+            {
+                var error = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {error}");
+                await CargarCategorias();
+                return View(libro);
+            }
+
+            TempData["Ok"] = "Libro creado correctamente.";
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var libro = await _http.GetFromJsonAsync<Libro>($"{RecursoLibros}/{id}");
+            if (libro == null) return NotFound();
+
+            await CargarCategorias(libro.CategoriaId);
             return View(libro);
         }
 
-        // GET: Libros/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libro = await _context.Libros.FindAsync(id);
-            if (libro == null)
-            {
-                return NotFound();
-            }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Id", libro.CategoriaId);
-            return View(libro);
-        }
-
-        // POST: Libros/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ISBN,Titulo,AnioPublicacion,CategoriaId")] Libro libro)
+        public async Task<IActionResult> Edit(int id, Libro libro)
         {
-            if (id != libro.Id)
+            if (id != libro.Id) return BadRequest();
+
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                await CargarCategorias(libro.CategoriaId);
+                return View(libro);
             }
 
-            if (ModelState.IsValid)
+            var res = await _http.PutAsJsonAsync($"{RecursoLibros}/{id}", libro);
+
+            if (!res.IsSuccessStatusCode)
             {
-                try
-                {
-                    _context.Update(libro);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!LibroExists(libro.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                var error = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {error}");
+                await CargarCategorias(libro.CategoriaId);
+                return View(libro);
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Id", libro.CategoriaId);
-            return View(libro);
+
+            TempData["Ok"] = "Libro actualizado.";
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Libros/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var libro = await _context.Libros
-                .Include(l => l.Categoria)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (libro == null)
-            {
-                return NotFound();
-            }
+            var libro = await _http.GetFromJsonAsync<Libro>($"{RecursoLibros}/{id}");
+            if (libro == null) return NotFound();
 
             return View(libro);
         }
 
-        // POST: Libros/Delete/5
+     
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var libro = await _context.Libros.FindAsync(id);
-            if (libro != null)
-            {
-                _context.Libros.Remove(libro);
-            }
+            var res = await _http.DeleteAsync($"{RecursoLibros}/{id}");
 
-            await _context.SaveChangesAsync();
+            TempData[res.IsSuccessStatusCode ? "Ok" : "Error"] =
+                res.IsSuccessStatusCode ? "Libro eliminado." : $"Error {(int)res.StatusCode}";
+
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LibroExists(int id)
+        
+        private async Task CargarCategorias(int? seleccion = null)
         {
-            return _context.Libros.Any(e => e.Id == id);
+            var categorias = await _http.GetFromJsonAsync<List<Categoria>>(RecursoCategorias) ?? new();
+
+            ViewData["Categorias"] = new SelectList(
+                categorias,
+                nameof(Categoria.Id),
+                nameof(Categoria.Nombre),
+                seleccion
+            );
         }
     }
 }

@@ -1,41 +1,48 @@
-﻿@model IEnumerable<LibroAutor>
+﻿@model IEnumerable<Binaes.Web.Models.LibroAutor>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Relación Libro - Autor";
 }
 
-<h1>Index</h1>
+<h1 class="mb-4">Relaciones Libro - Autor</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary">➕ Crear nueva relación</a>
+</div>
+
+<table class="table table-striped table-bordered align-middle">
+    <thead class="table-dark">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Libro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Autor)
-            </th>
-            <th></th>
+            <th>Libro</th>
+            <th>Autor</th>
+            <th style="width: 200px;">Acciones</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Libro.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Autor.Id)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(item.Libro?.Titulo ?? $"ID: {item.LibroId}")</td>
+
+                <td>@(item.Autor?.Nombre ?? $"ID: {item.AutorId}")</td>
+
+                <td>
+                    <a asp-action="Edit"
+                       asp-route-libroId="@item.LibroId"
+                       asp-route-autorId="@item.AutorId"
+                       class="btn btn-sm btn-warning me-1">Editar</a>
+
+                    <a asp-action="Details"
+                       asp-route-libroId="@item.LibroId"
+                       asp-route-autorId="@item.AutorId"
+                       class="btn btn-sm btn-info text-white me-1">Detalles</a>
+
+                    <a asp-action="Delete"
+                       asp-route-libroId="@item.LibroId"
+                       asp-route-autorId="@item.AutorId"
+                       class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -1,149 +1,149 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Binaes.Web.Data;
+using System.Net.Http.Json;
+using Binaes.Web.Models;
 
 namespace Binaes.Web.Controllers
 {
     public class PrestamoItemController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HttpClient _http;
 
-        public PrestamoItemController(ApplicationDbContext context)
+      
+        private const string RecursoItems = "api/PrestamoItems";
+        private const string RecursoEjemplares = "api/Ejemplares";
+        private const string RecursoPrestamos = "api/Prestamos";
+
+        public PrestamoItemController(IHttpClientFactory httpFactory)
         {
-            _context = context;
+            _http = httpFactory.CreateClient("BinaesApi");
+        }
+
+       
+        private async Task CargarCombos(int? ejemplarId = null, int? prestamoId = null)
+        {
+            var ejemplares = await _http.GetFromJsonAsync<List<Ejemplar>>(RecursoEjemplares) ?? new();
+            var prestamos = await _http.GetFromJsonAsync<List<Prestamo>>(RecursoPrestamos) ?? new();
+
+           
+            ViewData["EjemplarId"] = new SelectList(ejemplares, nameof(Ejemplar.Id), nameof(Ejemplar.Id), ejemplarId);
+            ViewData["PrestamoId"] = new SelectList(prestamos, nameof(Prestamo.Id), nameof(Prestamo.Id), prestamoId);
         }
 
         // GET: PrestamoItem
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.PrestamoItems.Include(p => p.Ejemplar).Include(p => p.Prestamo);
-            return View(await applicationDbContext.ToListAsync());
+            var items = await _http.GetFromJsonAsync<List<PrestamoItem>>(RecursoItems);
+            return View(items);
         }
 
         // GET: PrestamoItem/Details/5
-        public async Task<IActionResult> Details(long? id)
+        public async Task<IActionResult> Details(long id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var prestamoItem = await _context.PrestamoItems
-                .Include(p => p.Ejemplar)
-                .Include(p => p.Prestamo)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (prestamoItem == null)
-            {
-                return NotFound();
-            }
-
-            return View(prestamoItem);
+            var item = await _http.GetFromJsonAsync<PrestamoItem>($"{RecursoItems}/{id}");
+            if (item == null) return NotFound();
+            return View(item);
         }
 
         // GET: PrestamoItem/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["EjemplarId"] = new SelectList(_context.Ejemplares, "Id", "Id");
-            ViewData["PrestamoId"] = new SelectList(_context.Prestamos, "Id", "Id");
-            return View();
+            await CargarCombos();
+            return View(new PrestamoItem
+            {
+                Renovaciones = 0
+                // FechaDevolucion = null (por defecto)
+            });
         }
 
         // POST: PrestamoItem/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PrestamoId,EjemplarId,Renovaciones,FechaDevolucion,Estado")] PrestamoItem prestamoItem)
+        public async Task<IActionResult> Create(PrestamoItem item)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(prestamoItem);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                await CargarCombos(item.EjemplarId, item.PrestamoId);
+                return View(item);
             }
-            ViewData["EjemplarId"] = new SelectList(_context.Ejemplares, "Id", "Id", prestamoItem.EjemplarId);
-            ViewData["PrestamoId"] = new SelectList(_context.Prestamos, "Id", "Id", prestamoItem.PrestamoId);
-            return View(prestamoItem);
+
+            
+            var payload = new
+            {
+                prestamoId = item.PrestamoId,
+                ejemplarId = item.EjemplarId,
+                renovaciones = item.Renovaciones,
+                fechaDevolucion = item.FechaDevolucion,
+                estado = item.Estado
+            };
+
+            var res = await _http.PostAsJsonAsync(RecursoItems, payload);
+
+            if (!res.IsSuccessStatusCode)
+            {
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                await CargarCombos(item.EjemplarId, item.PrestamoId);
+                return View(item);
+            }
+
+            TempData["Ok"] = "Ítem de préstamo creado.";
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: PrestamoItem/Edit/5
-        public async Task<IActionResult> Edit(long? id)
+        public async Task<IActionResult> Edit(long id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var item = await _http.GetFromJsonAsync<PrestamoItem>($"{RecursoItems}/{id}");
+            if (item == null) return NotFound();
 
-            var prestamoItem = await _context.PrestamoItems.FindAsync(id);
-            if (prestamoItem == null)
-            {
-                return NotFound();
-            }
-            ViewData["EjemplarId"] = new SelectList(_context.Ejemplares, "Id", "Id", prestamoItem.EjemplarId);
-            ViewData["PrestamoId"] = new SelectList(_context.Prestamos, "Id", "Id", prestamoItem.PrestamoId);
-            return View(prestamoItem);
+            await CargarCombos(item.EjemplarId, item.PrestamoId);
+            return View(item);
         }
 
         // POST: PrestamoItem/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Id,PrestamoId,EjemplarId,Renovaciones,FechaDevolucion,Estado")] PrestamoItem prestamoItem)
+        public async Task<IActionResult> Edit(long id, PrestamoItem item)
         {
-            if (id != prestamoItem.Id)
+            if (id != item.Id) return BadRequest();
+
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                await CargarCombos(item.EjemplarId, item.PrestamoId);
+                return View(item);
             }
 
-            if (ModelState.IsValid)
+            var payload = new
             {
-                try
-                {
-                    _context.Update(prestamoItem);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PrestamoItemExists(prestamoItem.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                id = item.Id,
+                prestamoId = item.PrestamoId,
+                ejemplarId = item.EjemplarId,
+                renovaciones = item.Renovaciones,
+                fechaDevolucion = item.FechaDevolucion,
+                estado = item.Estado
+            };
+
+            var res = await _http.PutAsJsonAsync($"{RecursoItems}/{id}", payload);
+
+            if (!res.IsSuccessStatusCode)
+            {
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                await CargarCombos(item.EjemplarId, item.PrestamoId);
+                return View(item);
             }
-            ViewData["EjemplarId"] = new SelectList(_context.Ejemplares, "Id", "Id", prestamoItem.EjemplarId);
-            ViewData["PrestamoId"] = new SelectList(_context.Prestamos, "Id", "Id", prestamoItem.PrestamoId);
-            return View(prestamoItem);
+
+            TempData["Ok"] = "Ítem de préstamo actualizado.";
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: PrestamoItem/Delete/5
-        public async Task<IActionResult> Delete(long? id)
+        public async Task<IActionResult> Delete(long id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var prestamoItem = await _context.PrestamoItems
-                .Include(p => p.Ejemplar)
-                .Include(p => p.Prestamo)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (prestamoItem == null)
-            {
-                return NotFound();
-            }
-
-            return View(prestamoItem);
+            var item = await _http.GetFromJsonAsync<PrestamoItem>($"{RecursoItems}/{id}");
+            if (item == null) return NotFound();
+            return View(item);
         }
 
         // POST: PrestamoItem/Delete/5
@@ -151,19 +151,10 @@ namespace Binaes.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long id)
         {
-            var prestamoItem = await _context.PrestamoItems.FindAsync(id);
-            if (prestamoItem != null)
-            {
-                _context.PrestamoItems.Remove(prestamoItem);
-            }
-
-            await _context.SaveChangesAsync();
+            var res = await _http.DeleteAsync($"{RecursoItems}/{id}");
+            TempData[res.IsSuccessStatusCode ? "Ok" : "Error"] =
+                res.IsSuccessStatusCode ? "Ítem eliminado." : $"Error {(int)res.StatusCode}";
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool PrestamoItemExists(long id)
-        {
-            return _context.PrestamoItems.Any(e => e.Id == id);
         }
     }
 }

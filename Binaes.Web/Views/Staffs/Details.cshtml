@@ -1,42 +1,35 @@
 ﻿@model Staff
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del Staff";
 }
 
-<h1>Details</h1>
+<h1 class="mb-3">Detalles del Staff</h1>
 
-<div>
-    <h4>Staff</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Username)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rol)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rol)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Activo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Activo)
-        </dd>
-    </dl>
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h4 class="card-title mb-3">Información del Staff</h4>
+        <hr />
+
+        <dl class="row mb-0">
+            <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(m => m.Username)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Username)</dd>
+
+            <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(m => m.Nombre)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Nombre)</dd>
+
+            <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(m => m.Rol)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Rol)</dd>
+
+            <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(m => m.Activo)</dt>
+            <dd class="col-sm-9">
+                @(Model.Activo ? "Sí" : "No")
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="d-flex gap-2">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
 </div>

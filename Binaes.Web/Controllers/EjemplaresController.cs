@@ -1,163 +1,128 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Binaes.Web.Data;
+using System.Net.Http.Json;
+using Binaes.Web.Models;
 
 namespace Binaes.Web.Controllers
 {
     public class EjemplaresController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HttpClient _http;
 
-        public EjemplaresController(ApplicationDbContext context)
+        private const string RecursoEjemplares = "api/Ejemplares";
+        private const string RecursoLibros = "api/Libros";
+
+        public EjemplaresController(IHttpClientFactory httpFactory)
         {
-            _context = context;
+            _http = httpFactory.CreateClient("BinaesApi"); 
         }
 
-        // GET: Ejemplares
+        // GET: /Ejemplares
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Ejemplares.Include(e => e.Libro);
-            return View(await applicationDbContext.ToListAsync());
+            var ejemplares = await _http.GetFromJsonAsync<List<Ejemplar>>(RecursoEjemplares) ?? new();
+            return View(ejemplares);
         }
 
-        // GET: Ejemplares/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: /Ejemplares/Details/5
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ejemplar = await _context.Ejemplares
-                .Include(e => e.Libro)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (ejemplar == null)
-            {
-                return NotFound();
-            }
-
+            var ejemplar = await _http.GetFromJsonAsync<Ejemplar>($"{RecursoEjemplares}/{id}");
+            if (ejemplar == null) return NotFound();
             return View(ejemplar);
         }
 
-        // GET: Ejemplares/Create
-        public IActionResult Create()
+       
+        private async Task CargarLibrosSelectAsync(int? seleccionado = null)
         {
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id");
+            var libros = await _http.GetFromJsonAsync<List<Libro>>(RecursoLibros) ?? new();
+            ViewData["LibroId"] = new SelectList(libros, nameof(Libro.Id), nameof(Libro.Titulo), seleccionado);
+        }
+
+        // GET: /Ejemplares/Create
+        public async Task<IActionResult> Create()
+        {
+            await CargarLibrosSelectAsync();
             return View();
         }
 
-        // POST: Ejemplares/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: /Ejemplares/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,LibroId,CodigoInterno,Estado")] Ejemplar ejemplar)
+        public async Task<IActionResult> Create(Ejemplar ejemplar)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(ejemplar);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                await CargarLibrosSelectAsync(ejemplar.LibroId);
+                return View(ejemplar);
             }
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id", ejemplar.LibroId);
+
+            var res = await _http.PostAsJsonAsync(RecursoEjemplares, ejemplar);
+            if (!res.IsSuccessStatusCode)
+            {
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                await CargarLibrosSelectAsync(ejemplar.LibroId);
+                return View(ejemplar);
+            }
+
+            TempData["Ok"] = "Ejemplar creado correctamente.";
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: /Ejemplares/Edit/5
+        public async Task<IActionResult> Edit(int id)
+        {
+            var ejemplar = await _http.GetFromJsonAsync<Ejemplar>($"{RecursoEjemplares}/{id}");
+            if (ejemplar == null) return NotFound();
+
+            await CargarLibrosSelectAsync(ejemplar.LibroId);
             return View(ejemplar);
         }
 
-        // GET: Ejemplares/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ejemplar = await _context.Ejemplares.FindAsync(id);
-            if (ejemplar == null)
-            {
-                return NotFound();
-            }
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id", ejemplar.LibroId);
-            return View(ejemplar);
-        }
-
-        // POST: Ejemplares/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: /Ejemplares/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,LibroId,CodigoInterno,Estado")] Ejemplar ejemplar)
+        public async Task<IActionResult> Edit(int id, Ejemplar ejemplar)
         {
-            if (id != ejemplar.Id)
+            if (id != ejemplar.Id) return BadRequest();
+
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                await CargarLibrosSelectAsync(ejemplar.LibroId);
+                return View(ejemplar);
             }
 
-            if (ModelState.IsValid)
+            var res = await _http.PutAsJsonAsync($"{RecursoEjemplares}/{id}", ejemplar);
+            if (!res.IsSuccessStatusCode)
             {
-                try
-                {
-                    _context.Update(ejemplar);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EjemplarExists(ejemplar.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                var body = await res.Content.ReadAsStringAsync();
+                ModelState.AddModelError("", $"Error {(int)res.StatusCode}: {body}");
+                await CargarLibrosSelectAsync(ejemplar.LibroId);
+                return View(ejemplar);
             }
-            ViewData["LibroId"] = new SelectList(_context.Libros, "Id", "Id", ejemplar.LibroId);
+
+            TempData["Ok"] = "Ejemplar actualizado.";
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: /Ejemplares/Delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            var ejemplar = await _http.GetFromJsonAsync<Ejemplar>($"{RecursoEjemplares}/{id}");
+            if (ejemplar == null) return NotFound();
             return View(ejemplar);
         }
 
-        // GET: Ejemplares/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ejemplar = await _context.Ejemplares
-                .Include(e => e.Libro)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (ejemplar == null)
-            {
-                return NotFound();
-            }
-
-            return View(ejemplar);
-        }
-
-        // POST: Ejemplares/Delete/5
+        // POST: /Ejemplares/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var ejemplar = await _context.Ejemplares.FindAsync(id);
-            if (ejemplar != null)
-            {
-                _context.Ejemplares.Remove(ejemplar);
-            }
-
-            await _context.SaveChangesAsync();
+            var res = await _http.DeleteAsync($"{RecursoEjemplares}/{id}");
+            TempData[res.IsSuccessStatusCode ? "Ok" : "Error"] =
+                res.IsSuccessStatusCode ? "Ejemplar eliminado." : $"Error {(int)res.StatusCode}";
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool EjemplarExists(int id)
-        {
-            return _context.Ejemplares.Any(e => e.Id == id);
         }
     }
 }

@@ -1,10 +1,19 @@
-﻿using System;
+﻿using System.Text.Json.Serialization;
 
-public class LibroAutor
+namespace Binaes.Web.Models
 {
-    public int LibroId { get; set; }
-    public Libro Libro { get; set; }
+    public class LibroAutor
+    {
+        [JsonPropertyName("libroId")]
+        public int LibroId { get; set; }
 
-    public int AutorId { get; set; }
-    public Autor Autor { get; set; }
+        [JsonPropertyName("libro")]
+        public Libro? Libro { get; set; }
+
+        [JsonPropertyName("autorId")]
+        public int AutorId { get; set; }
+
+        [JsonPropertyName("autor")]
+        public Autor? Autor { get; set; }
+    }
 }
