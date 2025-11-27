@@ -5505,28 +5505,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\johan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\fergo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\johan\\source\\repos\\BINAES-PRESTAMOS\\Binaes.Web\\Binaes.Web.csproj",
+      "projectUniqueName": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Binaes.Web.csproj",
       "projectName": "Binaes.Web",
-      "projectPath": "C:\\Users\\johan\\source\\repos\\BINAES-PRESTAMOS\\Binaes.Web\\Binaes.Web.csproj",
-      "packagesPath": "C:\\Users\\johan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\johan\\source\\repos\\BINAES-PRESTAMOS\\Binaes.Web\\obj\\",
+      "projectPath": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Binaes.Web.csproj",
+      "packagesPath": "C:\\Users\\fergo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\johan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fergo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -5582,7 +5579,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

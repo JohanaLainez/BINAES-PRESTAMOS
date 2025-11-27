@@ -40,6 +40,8 @@ namespace Binaes.Web.Controllers
         {
             if (!ModelState.IsValid) return View(categoria);
 
+            categoria.Libros ??= new List<Libro>();
+
             var res = await _http.PostAsJsonAsync(Recurso, categoria);
             if (!res.IsSuccessStatusCode)
             {

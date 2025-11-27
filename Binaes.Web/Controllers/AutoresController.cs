@@ -40,6 +40,8 @@ namespace Binaes.Web.Controllers
         {
             if (!ModelState.IsValid) return View(autor);
 
+            autor.Libros ??= new List<Libro>();
+
             var response = await _http.PostAsJsonAsync("/api/Autores", autor);
 
             if (!response.IsSuccessStatusCode)
@@ -65,6 +67,8 @@ namespace Binaes.Web.Controllers
         {
             if (id != autor.Id) return NotFound();
             if (!ModelState.IsValid) return View(autor);
+
+            autor.Libros ??= new List<Libro>();
 
             var response = await _http.PutAsJsonAsync($"/api/Autores/{id}", autor);
 
