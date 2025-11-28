@@ -46,6 +46,9 @@ namespace Binaes.Web.Controllers
                 return View(libro);
             }
 
+            libro.Autores ??= new List<Autor>();
+            libro.Ejemplares ??= new List<Ejemplar>();
+
             var res = await _http.PostAsJsonAsync(RecursoLibros, libro);
 
             if (!res.IsSuccessStatusCode)
@@ -81,6 +84,9 @@ namespace Binaes.Web.Controllers
                 await CargarCategorias(libro.CategoriaId);
                 return View(libro);
             }
+
+            libro.Autores ??= new List<Autor>();
+            libro.Ejemplares ??= new List<Ejemplar>();
 
             var res = await _http.PutAsJsonAsync($"{RecursoLibros}/{id}", libro);
 
@@ -122,7 +128,7 @@ namespace Binaes.Web.Controllers
         {
             var categorias = await _http.GetFromJsonAsync<List<Categoria>>(RecursoCategorias) ?? new();
 
-            ViewData["Categorias"] = new SelectList(
+            ViewBag.CategoriaId = new SelectList(
                 categorias,
                 nameof(Categoria.Id),
                 nameof(Categoria.Nombre),
