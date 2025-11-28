@@ -3,252 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\controllers\\ejemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\controllers\\ejemplarescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\autores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\autores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\services\\binaesapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\services\\binaesapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\categorias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\categorias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\staffs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\staffs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\staffs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\staffs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\autores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\autores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\usuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\staffs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\staffs\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\prestamos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\prestamos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\prestamos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\prestamos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\prestamos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\prestamos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\prestamos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\prestamos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\prestamoitem\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\prestamoitem\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\ejemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\ejemplares\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libroautor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libroautor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\parametros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\parametros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\prestamoitem\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\prestamoitem\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\prestamoitem\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\prestamoitem\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\parametros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\parametros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\parametros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\parametros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\parametros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\parametros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\parametros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\parametros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libros\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libros\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libros\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libroautor\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libroautor\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libroautor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libroautor\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libroautor\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libroautor\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\ejemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\ejemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\libroautor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\libroautor\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\ejemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\ejemplares\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\ejemplares\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\ejemplares\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\ejemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\ejemplares\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\ejemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\ejemplares\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\categorias\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\categorias\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\categorias\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\categorias\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\categorias\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\categorias\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\prestamoitemcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\prestamoitemcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\categorias\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\categorias\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\autores\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\autores\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\autores\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\autores\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\views\\autores\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\views\\autores\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\libroautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\libroautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\ejemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\ejemplar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\binaes.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\binaes.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|c:\\users\\fergo\\onedrive\\documents\\udb\\ciclo ii\\das\\unidad 5\\proyecto binaes\\binaes-prestamos\\binaes.web\\obj\\binaes.web.csproj.nuget.dgspec.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{72EEA225-E4B5-4416-ACDB-D6DBF2A15BC4}|Binaes.Web\\Binaes.Web.csproj|solutionrelative:binaes.web\\obj\\binaes.web.csproj.nuget.dgspec.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -258,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -279,806 +59,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AutoresController.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\AutoresController.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Controllers\\AutoresController.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\AutoresController.cs",
-              "RelativeToolTip": "Binaes.Web\\Controllers\\AutoresController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAswEYAAAAvAAAAAAAAAA==",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Binaes.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Binaes.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T23:14:03.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Staffs\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Staffs\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Staffs\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Staffs\\Edit.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:11:03.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Staffs\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Staffs\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Staffs\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Staffs\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:10:29.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Staffs\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Staffs\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Staffs\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Staffs\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:08:59.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:06:25.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:05:05.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:04:00.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Prestamos\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Prestamos\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:33:07.83Z",
+              "WhenOpened": "2025-11-28T00:40:16.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Autor.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Autor.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Models\\Autor.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Autor.cs",
-              "RelativeToolTip": "Binaes.Web\\Models\\Autor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:11:30.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Autores\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Autores\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:46:38.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "Binaes.Web\\appsettings.json",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\appsettings.json",
-              "RelativeToolTip": "Binaes.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-27T22:39:42.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "Binaes.Web\\Controllers\\CategoriasController.cs",
               "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\CategoriasController.cs",
               "RelativeToolTip": "Binaes.Web\\Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAkwCoAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T23:10:11.997Z",
+              "WhenOpened": "2025-11-28T00:40:03.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BinaesApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Services\\BinaesApiClient.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Services\\BinaesApiClient.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Services\\BinaesApiClient.cs",
-              "RelativeToolTip": "Binaes.Web\\Services\\BinaesApiClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T23:09:54.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Prestamos\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Prestamos\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:30:48.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Prestamos\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Prestamos\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:29:06.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Libros\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Libros\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:11:53.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Categorias\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Categorias\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:50:29.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Program.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Program.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Program.cs",
-              "RelativeToolTip": "Binaes.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T22:41:05.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Prestamos\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Prestamos\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Prestamos\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:26:27.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Autores\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Autores\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T02:05:10.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Usuarios\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Usuarios\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Usuarios\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Usuarios\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T02:12:59.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\PrestamoItem\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\PrestamoItem\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\PrestamoItem\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\PrestamoItem\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:24:42.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\PrestamoItem\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\PrestamoItem\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\PrestamoItem\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\PrestamoItem\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:22:37.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Parametros\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Parametros\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:18:05.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\LibroAutor\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\LibroAutor\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:03:33.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:55:37.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Index.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Ejemplares\\Index.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Index.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Ejemplares\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:54:42.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\PrestamoItem\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\PrestamoItem\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\PrestamoItem\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\PrestamoItem\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:18:46.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Parametros\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Parametros\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:17:37.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Parametros\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Parametros\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:17:10.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Parametros\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Parametros\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:16:36.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Parametros\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Parametros\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Parametros\\Create.cshtml",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvywAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:14:32.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Libros\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Libros\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:10:18.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Libros\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Libros\\Details.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:09:45.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Libros\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Libros\\Delete.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:08:20.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Libros\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Libros\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Libros\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:06:29.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\LibroAutor\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\LibroAutor\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:01:59.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\LibroAutor\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\LibroAutor\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T16:00:06.665Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\LibroAutor\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\LibroAutor\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:59:24.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:58:31.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:56:31.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Ejemplares\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Ejemplares\\Edit.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:53:31.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Ejemplares\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Ejemplares\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:52:53.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Ejemplares\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Ejemplares\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:52:26.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Ejemplares\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Ejemplares\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Ejemplares\\Create.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:51:28.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Categorias\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Categorias\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:50:05.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Categorias\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Categorias\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:49:26.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Categorias\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Categorias\\Delete.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:48:39.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Create.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Categorias\\Create.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Categorias\\Create.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Categorias\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:48:08.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Autores\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Delete.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Autores\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:47:39.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Details.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Autores\\Details.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Details.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Autores\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:47:13.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Binaes.Web\\Views\\Autores\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\Autores\\Edit.cshtml",
-              "RelativeToolTip": "Binaes.Web\\Views\\Autores\\Edit.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T15:45:08.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "PrestamoItemcs.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\PrestamoItemcs.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Models\\PrestamoItemcs.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\PrestamoItemcs.cs",
-              "RelativeToolTip": "Binaes.Web\\Models\\PrestamoItemcs.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:24:46.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Binaes.Web\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:34:24.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Usuario.cs",
-              "RelativeToolTip": "Binaes.Web\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:27:50.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Parametro.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Parametro.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Models\\Parametro.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Parametro.cs",
-              "RelativeToolTip": "Binaes.Web\\Models\\Parametro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:22:03.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "LibroAutor.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\LibroAutor.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Models\\LibroAutor.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\LibroAutor.cs",
-              "RelativeToolTip": "Binaes.Web\\Models\\LibroAutor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:15:47.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 4,
               "Title": "Ejemplar.cs",
               "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Ejemplar.cs",
               "RelativeDocumentMoniker": "Binaes.Web\\Models\\Ejemplar.cs",
               "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Ejemplar.cs",
               "RelativeToolTip": "Binaes.Web\\Models\\Ejemplar.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:23:44.785Z",
+              "WhenOpened": "2025-11-28T00:25:43.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 0,
+              "Title": "EjemplaresController.cs",
+              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\EjemplaresController.cs",
+              "RelativeDocumentMoniker": "Binaes.Web\\Controllers\\EjemplaresController.cs",
+              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\EjemplaresController.cs",
+              "RelativeToolTip": "Binaes.Web\\Controllers\\EjemplaresController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA4wBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T00:00:45.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
+              "RelativeDocumentMoniker": "Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
+              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
+              "RelativeToolTip": "Binaes.Web\\Views\\LibroAutor\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T23:57:27.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Libro.cs",
               "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Libro.cs",
               "RelativeDocumentMoniker": "Binaes.Web\\Models\\Libro.cs",
               "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Libro.cs",
               "RelativeToolTip": "Binaes.Web\\Models\\Libro.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBkAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:18:20.623Z",
+              "WhenOpened": "2025-11-27T23:55:39.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Categoria.cs",
-              "RelativeDocumentMoniker": "Binaes.Web\\Models\\Categoria.cs",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Models\\Categoria.cs",
-              "RelativeToolTip": "Binaes.Web\\Models\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LibrosController.cs",
+              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\LibrosController.cs",
+              "RelativeDocumentMoniker": "Binaes.Web\\Controllers\\LibrosController.cs",
+              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Controllers\\LibrosController.cs",
+              "RelativeToolTip": "Binaes.Web\\Controllers\\LibrosController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwDEAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T02:13:07.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Binaes.Web.csproj",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Binaes.Web.csproj",
-              "RelativeDocumentMoniker": "Binaes.Web\\Binaes.Web.csproj",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\Binaes.Web.csproj",
-              "RelativeToolTip": "Binaes.Web\\Binaes.Web.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-24T16:28:00.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "Binaes.Web.csproj.nuget.dgspec.json",
-              "DocumentMoniker": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\obj\\Binaes.Web.csproj.nuget.dgspec.json",
-              "RelativeDocumentMoniker": "Binaes.Web\\obj\\Binaes.Web.csproj.nuget.dgspec.json",
-              "ToolTip": "C:\\Users\\fergo\\OneDrive\\Documents\\UDB\\Ciclo II\\DAS\\Unidad 5\\Proyecto BINAES\\BINAES-PRESTAMOS\\Binaes.Web\\obj\\Binaes.Web.csproj.nuget.dgspec.json",
-              "RelativeToolTip": "Binaes.Web\\obj\\Binaes.Web.csproj.nuget.dgspec.json",
-              "ViewState": "AgIAADgAAAAAAAAAAAAuwEgAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-24T16:21:54.43Z",
+              "WhenOpened": "2025-11-27T23:49:05.103Z",
               "EditorCaption": ""
             }
           ]
